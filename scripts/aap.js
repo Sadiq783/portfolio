@@ -44,3 +44,17 @@ window.addEventListener("scroll", () => {
     navbar.classList.remove("active");
 });
 
+
+
+/* Scroll Reveal  */
+
+ScrollReveal({
+    distance: '50px',
+    duration: 600,
+    delay: 300,
+    easing: 'ease'
+});
+
+
+ScrollReveal().reveal(".home-content, .about-img", {origin: 'left'});
+ScrollReveal().reveal(".home-img, .about-content, .heading, .services-container, .portfolio-container, .contact form", {origin: 'right'});
