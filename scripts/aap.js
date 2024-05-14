@@ -1,4 +1,4 @@
-/* Toggle icon navbar */
+/* -------------------- Toggle icon navbar ------------------------*/
 
 let menuIcon = document.querySelector("#menu-icon");
 let navbar = document.querySelector(".main-nav");
@@ -44,9 +44,27 @@ window.addEventListener("scroll", () => {
     navbar.classList.remove("active");
 });
 
+/* ---------------------- Scroll Indicator --------------------------------- */
+
+let indicator = document.querySelector(".scroll-indicator .prograss");
+
+window.addEventListener("scroll", () => {
+
+    // Calcualte the total scrollable height
+    let scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+    // Find the current vertical scroll position of the document
+    let scrollTop = document.documentElement.scrollTop;
+
+    // Calculate the vertically scrolled portion of the document in %
+    let scrolled = (scrollTop / scrollHeight) * 100;
+
+    // Change the width of the scroll indicator (prograss) according to the vertically scrolled document
+    indicator.style.width = `${scrolled}%`;
+});
 
 
-/* Scroll Reveal  */
+/* ------------------------ Scroll Reveal -------------------------------------- */
 
 ScrollReveal({
     distance: '50px',

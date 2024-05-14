@@ -394,6 +394,26 @@ span {
     color: var(--snd-bg-color);
 }
 
+/* Scroll Indicator styling  */
+
+.scroll-indicator {
+    width: calc(100% - 6em);
+    height: 5px;
+    border-radius: 3px;
+    position: fixed;
+    top: 0;
+    left: 3em;
+    z-index: 999;
+}
+
+.scroll-indicator .prograss {
+    height: 100%;
+    width: 0;
+    border-radius: 3px;
+    background: linear-gradient(30deg, #FDC830, #F37335);
+    transition: width .7s;
+}
+
 /* Break Points  */
 
 @media (max-width: 1200px) {
