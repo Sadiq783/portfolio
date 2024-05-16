@@ -29,6 +29,17 @@ body {
     color: var(--text-color);
 }
 
+/* main scroll bar  stylings */
+::-webkit-scrollbar {
+    background-color: transparent;
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(#F76B1C, #FAD961);
+    border-radius: 100px;
+}
+
 section, main{
     min-height: 100vh;
     padding: 10rem 9% 2rem;
