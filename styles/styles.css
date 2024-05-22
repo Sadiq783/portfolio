@@ -342,13 +342,84 @@ span {
 }
 
 .contact form .input-box {
+    position: relative;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-bottom: 10px;
+    /* border: 1px red solid; */
 }
+
+.contact form .input-box label,
+.contact form .textArea label {
+    position: absolute;
+    font-size: 1.5em;
+    color: var(--text-color);
+    top: 50%;
+    left: 2%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    background: var(--bg-color);
+    padding: 0px 5px;
+    background: transparent;
+    transition: all .5s;
+
+}
+
+.contact form .input-box #emailLabel, #emailSubjectLabel {
+    left: 53%;
+}
+
+
+
+.contact form .input-box #txtName:focus ~ #nameLabel,
+.contact form .input-box #txtName:valid ~ #nameLabel {
+    transform: translateX(8px);
+    top: -5px;
+    background: var(--bg-color);
+    color: var(--main-color);
+    border-left: 1px solid var(--main-color);
+    border-right: 1px solid var(--main-color);
+}
+
+.contact form .input-box #email:focus ~ #emailLabel,
+.contact form .input-box #email:valid ~ #emailLabel
+ {
+    transform: translateX(8px);
+    top: -5px;
+    background: var(--bg-color);
+    color: var(--main-color);
+    border-left: 1px solid var(--main-color);
+    border-right: 1px solid var(--main-color);
+}
+
+.contact form .input-box #number:focus ~ #numberLabel,
+.contact form .input-box #number:valid ~ #numberLabel {
+    transform: translateX(8px);
+    top: -5px;
+    background: var(--bg-color);
+    color: var(--main-color);
+    border-left: 1px solid var(--main-color);
+    border-right: 1px solid var(--main-color);
+}
+
+.contact form .input-box #emailSubject:focus ~ #emailSubjectLabel,
+.contact form .input-box #emailSubject:valid ~ #emailSubjectLabel {
+    transform: translateX(8px);
+    top: -5px;
+    background: var(--bg-color);
+    color: var(--main-color);
+    border-left: 1px solid var(--main-color);
+    border-right: 1px solid var(--main-color);
+}
+
+
+
+
 
 .contact form .input-box input,
 .contact form textarea {
+    outline: 1px solid var(--main-color);
     width: 100%;
     padding: 1.5rem;
     font-size: 1.6rem;
@@ -356,6 +427,28 @@ span {
     background: var(--snd-bg-color);
     border-radius: .8rem;
     margin: .7rem 0;
+    transition: all .3s;
+}
+
+.contact form .textArea {
+    /* border: 1px solid blue; */
+    position: relative;
+}
+
+.contact form #textAreaLabel {
+    left: 2%;
+    top: 28px;
+    color: var(--text-color)
+}
+
+.contact form textarea:focus ~ #textAreaLabel,
+.contact form textarea:valid ~ #textAreaLabel {
+    transform: translateX(8px);
+    top: -5px;
+    background: var(--bg-color);
+    color: var(--main-color);
+    border-left: 1px solid var(--main-color);
+    border-right: 1px solid var(--main-color);   
 }
 
 .contact form .input-box input {

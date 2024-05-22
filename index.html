@@ -197,16 +197,23 @@
         <h2 class="heading">Contact <span>Me</span></h2>
         <form action="">
             <div class="input-box">
-                <input type="text" placeholder="Full Name">
-                <input type="email" placeholder="Email Address">
+                <input type="text" id="txtName" required>
+                <label for="txtName" id="nameLabel">Full Name</label>
+                <input type="email" id="email" required>
+                <label for="email" id="emailLabel">Email</label>
             </div>
 
             <div class="input-box">
-                <input type="number" placeholder="Mobile Number">
-                <input type="text" placeholder="Email Subject">
+                <input type="number" id="number" required>
+                <label for="number" id="numberLabel">Number</label>
+                <input type="text" id="emailSubject" required>
+                <label for="emailSubject" id="emailSubjectLabel">Email Subject</label>
             </div>
 
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <div class="textArea">
+                <textarea name="" id="" cols="30" rows="10" id="txtArea" required></textarea>
+                <label for="txtArea" id="textAreaLabel">Your Message</label>
+            </div>
 
             <input type="submit" value="Send Message" class="btn">
         </form>
