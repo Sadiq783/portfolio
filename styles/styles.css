@@ -347,7 +347,6 @@ span {
     justify-content: space-between;
     flex-wrap: wrap;
     margin-bottom: 10px;
-    /* border: 1px red solid; */
 }
 
 .contact form .input-box label,
@@ -638,7 +637,44 @@ span {
         font-size: 50%;
     }
 
+    .contact {
+        padding-top: 10px;
+    }
+
     .contact form .input-box input {
         width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .contact form .input-box {
+        margin-bottom: 0;
+    }
+
+    .contact form .input-box #nameLabel {
+        top: 25%;
+    }
+
+    .contact form .input-box #emailLabel {
+        top: 75%;
+        left: 2%;
+    }
+
+    .contact form .input-box #numberLabel {
+        top: 25%;
+    }
+
+    .contact form .input-box #emailSubjectLabel {
+        top: 75%;
+        left: 2%;
+    }
+
+    .contact form .input-box #email:focus ~ #emailLabel,
+    .contact form .input-box #email:valid ~ #emailLabel {
+        top: 50px;
+    }
+
+    .contact form .input-box #emailSubject:focus ~ #emailSubjectLabel,
+    .contact form .input-box #emailSubject:valid ~ #emailSubjectLabel {
+        top: 50px;
     }
 }
